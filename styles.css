@@ -8,14 +8,14 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f1f5f9; /* Greyish blue background for the body */
+    background-color: #f7f9e1; /* Greenish yellow background for the body */
     color: #333;
     padding: 0 5%; /* Ensure the body has padding on both sides for all pages */
 }
 
 /* Navbar styles */
 .navbar {
-    background-color: #007acc; /* Blue color for the navbar */
+    background-color: #006400; /* Deep green color for the navbar */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,7 +77,7 @@ nav a:hover {
 
 .about-text .highlight {
     font-weight: 600;
-    color: #007acc;
+    color: #006400; /* Deep green color for highlighted text */
 }
 
 .about-photo {
@@ -99,7 +99,7 @@ nav a:hover {
 .section {
     margin-top: 50px;
     padding: 0; /* No padding in the section itself, handled by body padding */
-    background-color: #f1f5f9; /* Greyish blue background for sections */
+    background-color: #f7f9e1; /* Greenish yellow background for sections */
 }
 
 .section h2 {
