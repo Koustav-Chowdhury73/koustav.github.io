@@ -1,66 +1,94 @@
+/* General styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-.navbar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.navbar ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-main {
-    padding: 20px;
     background-color: #f4f4f4;
 }
 
-section h2 {
-    font-size: 24px;
-    color: #333;
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
 }
 
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* About Section */
 .about-section {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    padding: 20px;
+    align-items: center;
 }
 
 .about-photo img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    max-width: 150px;
-    margin-right: 20px;
 }
 
 .about-text {
     max-width: 600px;
 }
 
-.highlight {
-    font-weight: bold;
-    color: #007bff;
+/* Research Section */
+.research-section,
+.achievements-section,
+.contact-section {
+    padding: 20px;
 }
 
+.research-section h2,
+.achievements-section h2,
+.contact-section h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
     color: white;
-    margin-top: 20px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .navbar nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-photo {
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
 }
