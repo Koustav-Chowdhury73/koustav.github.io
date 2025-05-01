@@ -8,14 +8,14 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: #f1f5f9; /* Greyish blue background for the body */
     color: #333;
     padding: 0 5%; /* Ensure the body has padding on both sides for all pages */
 }
 
 /* Navbar styles */
 .navbar {
-    background-color: #ffffff;
+    background-color: #007acc; /* Blue color for the navbar */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,6 +29,7 @@ body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     margin-bottom: 10px;
+    color: #ffffff; /* White color for the text */
 }
 
 nav ul {
@@ -42,13 +43,13 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff; /* White color for the links */
     font-weight: 500;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #007acc;
+    color: #ffcc00; /* Hover effect for the links */
 }
 
 /* About section layout */
@@ -58,6 +59,8 @@ nav a:hover {
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
+    background-color: #ffffff; /* White background for about section */
+    padding: 40px 0;
 }
 
 .about-text {
@@ -96,6 +99,7 @@ nav a:hover {
 .section {
     margin-top: 50px;
     padding: 0; /* No padding in the section itself, handled by body padding */
+    background-color: #f1f5f9; /* Greyish blue background for sections */
 }
 
 .section h2 {
