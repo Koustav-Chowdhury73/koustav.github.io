@@ -1,122 +1,149 @@
-/* Reset some default browser styles */
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Base styles */
 body {
-    font-family: 'Poppins', 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
 }
 
-/* Navbar */
+/* Navbar styles */
 .navbar {
-    background-color: #333;
-    color: white;
-    padding: 20px 10px;
-    text-align: center;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .site-title {
-    margin-bottom: 10px;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.navbar nav ul {
-    list-style: none;
+nav ul {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
     padding: 0;
+    justify-content: center;
 }
 
-.navbar nav ul li {
-    margin: 0 12px;
-}
-
-.navbar nav ul li a {
-    color: white;
+nav a {
     text-decoration: none;
+    color: #333;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
-.navbar nav ul li a:hover {
-    color: #ffd700;
+nav a:hover {
+    color: #007acc;
 }
 
-/* About Section */
+/* About section layout */
 .about-section {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     padding: 40px 5%;
-    gap: 30px;
-    flex-wrap: wrap;
-    background-color: white;
+    gap: 20px;
 }
 
 .about-text {
-    flex: 2;
-    min-width: 250px;
-    line-height: 1.8;
-    font-size: 16px;
+    flex: 1 1 60%;
+    max-width: 100%;
+    font-size: 18px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-text .highlight {
+    font-weight: 600;
+    color: #007acc;
 }
 
 .about-photo {
-    flex: 0 0 180px;
-    text-align: center;
+    flex: 1 1 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .about-photo img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    width: 280px;
     object-fit: cover;
-    border: 3px solid #ccc;
 }
 
-/* Highlighted text */
-.highlight {
-    font-weight: 600;
-    color: #007acc;
+/* Section styles (Education, News, etc.) */
+.section {
+    margin-top: 50px;
+    padding: 0 5%;
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 12px;
-    background-color: #333;
-    color: white;
-    font-size: 14px;
+    padding: 20px 0;
+    background-color: #eee;
+    margin-top: 50px;
 }
 
-/* Mobile Responsive */
+/* Responsive styles */
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
-        text-align: center;
-    }
-
-    .about-photo {
-        margin-bottom: 20px;
-    }
-
-    .about-text {
-        flex: unset;
-    }
-
-    .navbar nav ul {
-        flex-direction: column;
         align-items: center;
+        text-align: left;
     }
 
-    .navbar nav ul li {
-        margin: 5px 0;
+    .about-text, .about-photo {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .site-title {
+        font-size: 26px;
+    }
+
+    .about-photo img {
+        width: 220px;
     }
 }
