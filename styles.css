@@ -38,12 +38,12 @@ body {
     justify-content: flex-start; /* Adjust alignment */
     align-items: center;
     padding: 20px;
-    gap: 10px; /* Reduced gap between text and image */
+    gap: 15px; /* Reduced gap between text and image */
 }
 
 .about-photo img {
-    width: 220px; /* Slightly smaller to reduce space */
-    height: 220px; /* Same size to maintain round shape */
+    width: 320px; /* Slightly smaller to reduce space */
+    height: 320px; /* Same size to maintain round shape */
     border-radius: 50%;
 }
 
