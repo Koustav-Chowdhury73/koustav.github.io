@@ -38,7 +38,7 @@ body {
     justify-content: flex-start; /* Adjust alignment */
     align-items: center;
     padding: 20px;
-    gap: 5px; /* Reduced gap between text and image */
+    gap: 10px; /* Reduced gap between text and image */
 }
 
 .about-photo img {
