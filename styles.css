@@ -8,17 +8,24 @@ body {
     line-height: 1.6;
 }
 
-/* Hero Section */
+/* Hero Section (Only for the Home page) */
 .hero {
     background: linear-gradient(135deg, #007BFF, #0056b3);
     color: white;
     text-align: center;
     padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
+
 .hero-content {
-    max-width: 600px;
-    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .profile-photo {
     width: 150px;
     height: auto;
@@ -26,11 +33,17 @@ body {
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.hero-text {
+    text-align: left;
+}
+
 .hero h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 2.5em;
     margin: 10px 0;
 }
+
 .hero p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.2em;
@@ -72,12 +85,12 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.about h2 {
+.about h2, .research h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 1.8em;
     margin-bottom: 10px;
 }
-.about p {
+.about p, .research p {
     font-size: 1.1em;
     color: #555;
 }
@@ -103,4 +116,19 @@ footer {
     .navbar ul li {
         margin: 5px 0;
     }
+    
+    /* Ensure hero content is stacked vertically on smaller screens */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        flex-direction: column;
+    }
+}
+
+/* Hide profile photo on all pages except the home page */
+body:not(.home) .profile-photo {
+    display: none;
 }
