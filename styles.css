@@ -15,21 +15,43 @@ body {
     text-align: center;
     padding: 40px 20px;
 }
+
 .hero-content {
-    max-width: 600px;
+    max-width: 1000px;
     margin: auto;
 }
+
+/* Flex container for image + text */
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+/* Text block beside profile picture */
+.hero .text-content {
+    max-width: 400px;
+}
+
+/* Profile Photo */
 .profile-photo {
     width: 150px;
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: none; /* Initially hide profile photo */
+    display: none; /* hidden by default */
 }
+
+/* Show image only on home page */
 body.home .profile-photo {
-    display: block; /* Display profile photo only on Home page */
+    display: block;
 }
+
+/* Hero text */
 .hero h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 2.5em;
@@ -106,5 +128,12 @@ footer {
     }
     .navbar ul li {
         margin: 5px 0;
+    }
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero .text-content {
+        max-width: 90%;
     }
 }
