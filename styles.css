@@ -1,84 +1,106 @@
+/* General Body Settings */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background: #f9f9f9;
     color: #333;
-    background-color: #f9f9f9;
     line-height: 1.6;
 }
-header {
-    background: #0056b3;
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #007BFF, #0056b3);
     color: white;
-    padding: 20px 10px;
+    text-align: center;
+    padding: 40px 20px;
 }
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hero-content {
+    max-width: 600px;
+    margin: auto;
 }
 .profile-photo {
-    max-width: 150px;
-    margin-right: 20px;
-    border: 3px solid white;
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.header-text h1 {
-    margin: 0;
-    font-size: 2.2em;
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    margin: 10px 0;
 }
-.header-text p {
-    margin: 0;
+.hero p {
+    font-family: 'Poppins', sans-serif;
     font-size: 1.2em;
 }
-.nav-bar {
+
+/* Navbar */
+.navbar {
+    background: #333;
+    padding: 10px 0;
+}
+.navbar ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    background: #007BFF;
-    list-style: none;
     padding: 0;
     margin: 0;
 }
-.nav-bar li {
-    margin: 0 10px;
+.navbar ul li {
+    margin: 0 15px;
 }
-.nav-bar li a {
+.navbar ul li a {
     text-decoration: none;
     color: white;
     padding: 10px 20px;
-    display: block;
+    font-weight: 500;
+    font-size: 1em;
 }
-.nav-bar li a:hover {
+.navbar ul li a:hover {
     background: #0056b3;
+    border-radius: 5px;
 }
+
+/* Main Content */
 main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-form input, form textarea, form button {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
+.about h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
-form button {
-    background: #0056b3;
-    color: white;
-    border: none;
-    cursor: pointer;
+.about p {
+    font-size: 1.1em;
+    color: #555;
 }
-form button:hover {
-    background: #004080;
-}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 10px 0;
     background: #333;
     color: white;
+    font-size: 0.9em;
     margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+    .navbar ul {
+        flex-direction: column;
+    }
+    .navbar ul li {
+        margin: 5px 0;
+    }
 }
