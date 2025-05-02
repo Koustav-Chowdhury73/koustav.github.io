@@ -1,153 +1,139 @@
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Base styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #1E90FF; /* Greenish yellow background for the body */
-    color: #333;
-    padding: 0 5%; /* Ensure the body has padding on both sides for all pages */
+    margin: 0;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    background-color: #ffffff; /* White background for all pages */
+    color: #000000;
 }
 
 /* Navbar styles */
 .navbar {
-    background-color: #006400; /* Deep green color for the navbar */
+    background-color: #003153; /* Prussian Blue */
+    padding: 1rem 2rem;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.site-title {
-    font-size: 32px;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    margin-bottom: 10px;
-    color: #ffffff; /* White color for the text */
-}
-
-nav ul {
-    display: flex;
+    color: white;
     flex-wrap: wrap;
-    gap: 20px;
+}
+
+.navbar .site-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.navbar ul {
     list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
     padding: 0;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
-nav a {
+.navbar a {
+    color: white;
     text-decoration: none;
-    color: #ffffff; /* White color for the links */
-    font-weight: 500;
-    transition: color 0.3s;
+    font-weight: 600;
 }
 
-nav a:hover {
-    color: #ffcc00; /* Hover effect for the links */
+.navbar a:hover {
+    text-decoration: underline;
 }
 
-/* About section layout */
+/* General section styling */
+section {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 1000px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
 .about-section {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: flex-start;
-    gap: 20px;
-    background-color: #ffffff; /* White background for about section */
-    padding: 40px 0;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .about-text {
-    flex: 1 1 60%;
-    max-width: 100%;
-    font-size: 18px;
-}
-
-.about-text h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.about-text .highlight {
-    font-weight: 600;
-    color: #006400; /* Deep green color for highlighted text */
+    flex: 2;
 }
 
 .about-photo {
-    flex: 1 1 30%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex: 1;
+    text-align: right;
 }
 
 .about-photo img {
-    max-width: 100%;
+    width: 220px;
     height: auto;
-    border-radius: 10px;
-    width: 280px;
-    object-fit: cover;
+    border-radius: 8px;
 }
 
-/* Section styles (Education, News, etc.) */
-.section {
-    margin-top: 50px;
-    padding: 0; /* No padding in the section itself, handled by body padding */
-    background-color: #f7f9e1; /* Greenish yellow background for sections */
+.highlight {
+    font-weight: bold;
+    color: #003153;
 }
 
-.section h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #222;
-    font-family: 'Poppins', sans-serif;
-}
-
-.section ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #444;
-}
-
-/* Footer */
 footer {
     text-align: center;
-    padding: 20px 0;
-    background-color: #eee;
-    margin-top: 50px;
+    padding: 1rem;
+    background-color: #003153;
+    color: white;
+    margin-top: 2rem;
 }
 
-/* Responsive styles */
+/* Responsive design */
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
         align-items: center;
-        text-align: left;
     }
 
-    .about-text, .about-photo {
-        flex: 1 1 100%;
-        max-width: 100%;
+    .about-photo {
+        text-align: center;
+        margin-bottom: 1rem;
     }
 
-    nav ul {
+    .navbar {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
     }
 
-    .site-title {
-        font-size: 26px;
+    .navbar ul {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
 
-    .about-photo img {
-        width: 220px;
+    .navbar .site-title {
+        text-align: center;
+        margin-bottom: 1rem;
     }
+}
+
+/* Education and News sections */
+.education-section, .news-section {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 1000px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.education-section h2, .news-section h2 {
+    color: #003153;
+    margin-bottom: 1rem;
+}
+
+.education-section ul, .news-section ul {
+    padding-left: 1.2rem;
+    line-height: 1.6;
 }
